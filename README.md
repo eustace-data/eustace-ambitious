@@ -22,7 +22,7 @@ This repository contains code modules for a partial implementation of an extende
 
 This repo is archived and static - we are not able to reply to comments, suggestions for improvements, bug fixes or pull requests.
 
-Further development of this code will take place under https://github.com/finnlindgren/
+Further development of this code will take place under https://github.com/finnlindgren/eustace-ambitious
 
 # Build instructions
 
