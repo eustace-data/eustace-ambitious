@@ -45,12 +45,13 @@ doxygen
 
 The are three main modules:
 
-* eustace: reading the intermediate raw binary data files produced by eustace-system
-* fmesher: handling unstructured triangulation mesh data structures; Originated by and
-           adapted by [Finn Lindgren](https://github.com/finnlindgren/), originally part
+* eustace: Reading the intermediate raw binary data files produced by eustace-system
+* fmesher: Handling unstructured triangulation mesh data structures; Originally part
 	   of [R-INLA](https://bitbucket.org/hrue/r-inla/src/default/fmesher/)
 * ambitious: A collection of submodules for an extended method, handling join estimation
      of daily mean temperatures and daily temperature ranges with non-Gaussian marginal distributions.
+
+All code in the fmesher and ambitious modules was written by [Finn Lindgren](https://github.com/finnlindgren/)
 
 The ambitious C++ modules are:
 

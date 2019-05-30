@@ -1,0 +1,13 @@
+add_library(eustace
+  definitions.cpp
+  timeutils/timebase.cpp
+  analysis/observationsource.cpp
+  analysis/inputmanager.cpp
+  analysis/fileio/rawbinary.cpp
+  analysis/fileio/locationpointers.cpp
+  analysis/fileio/mesh.cpp
+  analysis/break_points/break_points.cpp
+  analysis/break_points/insitu_land_break_points.cpp
+  )
+add_subdirectory(test)
+add_subdirectory(examples)

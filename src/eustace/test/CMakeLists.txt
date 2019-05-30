@@ -1,0 +1,19 @@
+include_directories(/gws/nopw/j04/eustace/software/cppunit/include)
+link_directories(/gws/nopw/j04/eustace/software/cppunit/lib)
+add_executable(test_eustace
+  main.cpp
+  TestCalendarDay.cpp
+  TestTimeBaseDays.cpp
+  TestObservationRawBinaryReader.cpp
+  TestLocationLookupRawBinaryReader.cpp
+  TestLocalCorrelationRangeRawBinaryReader.cpp
+  TestAnalysisInput.cpp
+  TestAnalysisInputManager.cpp
+  TestObservationIterator.cpp
+  TestLocationPointers.cpp
+  TestMeshReader.cpp
+  TestObservationBreakingPoints.cpp
+  TestBreakPointsReader.cpp
+)
+target_link_libraries(test_eustace cppunit eustace netcdf)
+add_definitions(-DEUSTACE_TEST_DATA_DIRECTORY="${CMAKE_CURRENT_SOURCE_DIR}/data")

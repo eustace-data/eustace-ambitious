@@ -1,0 +1,2 @@
+add_executable(example_analysis_input example_analysis_input.cpp)
+target_link_libraries(example_analysis_input eustace)

@@ -1,0 +1,2 @@
+add_executable(example_break_points example_break_points.cpp)
+target_link_libraries(example_break_points eustace netcdf)

@@ -1,0 +1,43 @@
+This is a copy of the fmesher subdirectory of the
+  https://bitbucket.org/hrue/r-inla
+repository.
+
+If
+  make
+fails due to lack of X11 librarires, then do
+  make clean
+  make -D"FMESHER_NO_X=1"
+
+Optionally,
+  make doc
+builds basic Doxygen documentation in
+  doc/fmesher-refman.pdf
+  html/index.html
+Most of the output is auto-generated, but the mesh algorithm methods
+tend to have much more detail and sometimes references.
+
+Then,
+  ./fmesher --help
+should show the command line options.
+See the .conf file in the examples directory for a simple call.
+
+All practical use of the program is via a more user-friendly R
+interface, part of the INLA package, with binary files used for
+communication (even though fmesher was intended to be used as a
+library, the monolithic program interface was how it turned out).
+
+The program was designed to build refined Delaunay triangulations on
+R2 and S2 (sphere), but the "smorg" options can be used used to answer
+queries about an existing mesh.
+
+In R, install INLA with
+  install.packages("INLA", repos="https://www.math.ntnu.no/inla/R/testing")
+
+In R,
+  mesh <- INLA::inla.mesh.create(globe=8)
+creates a subdivided (and deformed) icosahedron, and
+  A <- INLA::inla.spde.make.A(mesh, locations)
+constructs the location-to-mesh mapping. To get more meta-information
+(what triangle is the point in, etc),
+  proj <- INLA::inla.mesh.projector(mesh, locations)
+
