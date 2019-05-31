@@ -1,0 +1,2 @@
+add_executable(example_mesh_load example_mesh_load.cpp)
+target_link_libraries(example_mesh_load eustace netcdf)
